@@ -1,48 +1,70 @@
-"use client"
+"use client";
 
-import { Activity, Antenna, Brain, Cpu, HardHat, Laptop } from "lucide-react"
-import Image from "next/image"
-import { useState } from "react"
+import { Activity, Antenna, Brain, Cpu, HardHat, Laptop } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { AnimatedSection } from "@/components/animated-section"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import dashboard from '../public/dashboard.jpeg'
+import collection from '../public/collection.jpeg'
+import antenna from '../public/Antreena.jpg'
+import helemt from '../public/helmet.jpeg'
+import control from '../public/control.jpeg'
+
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { AnimatedSection } from "@/components/animated-section";
 
 export function ComponentsSection() {
-  const [activeTab, setActiveTab] = useState("cs")
+  const [activeTab, setActiveTab] = useState("cs");
 
   return (
-    <section id="components" className="py-20 bg-gradient-to-b from-slate-50 to-white">
+    <section
+      id="components"
+      className="py-20 bg-gradient-to-b from-slate-50 to-white"
+    >
       <div className="container mx-auto px-4">
         <AnimatedSection animation="fade-up">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Project Components</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
+              Project Components
+            </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Our project integrates hardware and software components across multiple engineering disciplines.
+              Our project integrates hardware and software components across
+              multiple engineering disciplines.
             </p>
           </div>
         </AnimatedSection>
 
-        <Tabs defaultValue="cs" className="max-w-5xl mx-auto" onValueChange={(value) => setActiveTab(value)}>
+        <Tabs
+          defaultValue="cs"
+          className="max-w-5xl mx-auto"
+          onValueChange={(value) => setActiveTab(value)}
+        >
           <AnimatedSection animation="fade-up" delay={200}>
             <TabsList className="grid w-full grid-cols-3 mb-8">
               <TabsTrigger
                 value="cs"
-                className="data-[state=active]:bg-blue-100 data-[state=active]:text-blue-800 transition-all duration-300"
+                className="data-[state=active]:bg-blue-100 data-[state=active]:text-[#210F38] transition-all duration-300"
               >
                 <Laptop className="h-4 w-4 mr-2" />
                 Computer Science
               </TabsTrigger>
               <TabsTrigger
                 value="ee"
-                className="data-[state=active]:bg-blue-100 data-[state=active]:text-blue-800 transition-all duration-300"
+                className="data-[state=active]:bg-blue-100 data-[state=active]:text-[#210F38] transition-all duration-300"
               >
                 <Antenna className="h-4 w-4 mr-2" />
                 Electrical Engineering
               </TabsTrigger>
               <TabsTrigger
                 value="me"
-                className="data-[state=active]:bg-blue-100 data-[state=active]:text-blue-800 transition-all duration-300"
+                className="data-[state=active]:bg-blue-100 data-[state=active]:text-[#210F38] transition-all duration-300"
               >
                 <HardHat className="h-4 w-4 mr-2" />
                 Mechanical Engineering
@@ -75,16 +97,22 @@ export function ComponentsSection() {
                   delay: 500,
                 },
               ].map((item, index) => (
-                <AnimatedSection key={index} animation="fade-up" delay={item.delay}>
+                <AnimatedSection
+                  key={index}
+                  animation="fade-up"
+                  delay={item.delay}
+                >
                   <Card className="border-blue-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
                     <CardHeader>
-                      <CardTitle className="flex items-center gap-2 text-blue-700">
+                      <CardTitle className="flex items-center gap-2 text-[#210F38]">
                         <item.icon className="h-5 w-5" />
                         {item.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription className="text-slate-700 text-base">{item.description}</CardDescription>
+                      <CardDescription className="text-slate-700 text-base">
+                        {item.description}
+                      </CardDescription>
                     </CardContent>
                   </Card>
                 </AnimatedSection>
@@ -92,18 +120,18 @@ export function ComponentsSection() {
             </div>
 
             <AnimatedSection animation="fade-up" delay={600}>
-              <div className="bg-slate-50 p-6 rounded-lg">
-                <div className="aspect-video relative rounded-lg overflow-hidden shadow-md">
+              <div className="bg-slate-50 p-6 rounded-lg align-center flex-col justify-center">
                   <Image
-                    src="/placeholder.svg?height=600&width=1200"
+                    src={dashboard}
                     alt="Radiologist Dashboard Interface"
-                    width={1200}
+                    width={600}
                     height={600}
-                    className="object-cover transition-transform duration-700 hover:scale-105"
+                    className=""
                   />
-                </div>
+                
                 <p className="text-center mt-4 text-slate-600">
-                  The Radiologist Dashboard interface showing brain visualization and AI-assisted diagnosis
+                  The Radiologist Dashboard interface showing brain
+                  visualization and AI-assisted diagnosis
                 </p>
               </div>
             </AnimatedSection>
@@ -127,16 +155,22 @@ export function ComponentsSection() {
                   delay: 400,
                 },
               ].map((item, index) => (
-                <AnimatedSection key={index} animation={activeTab === "ee" ? "fade-up" : "none"} delay={item.delay}>
+                <AnimatedSection
+                  key={index}
+                  animation={activeTab === "ee" ? "fade-up" : "none"}
+                  delay={item.delay}
+                >
                   <Card className="border-blue-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
                     <CardHeader>
-                      <CardTitle className="flex items-center gap-2 text-blue-700">
+                      <CardTitle className="flex items-center gap-2 text-[#210F38]">
                         <item.icon className="h-5 w-5" />
                         {item.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription className="text-slate-700 text-base">{item.description}</CardDescription>
+                      <CardDescription className="text-slate-700 text-base">
+                        {item.description}
+                      </CardDescription>
                     </CardContent>
                   </Card>
                 </AnimatedSection>
@@ -144,42 +178,42 @@ export function ComponentsSection() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <AnimatedSection animation={activeTab === "ee" ? "fade-left" : "none"} delay={500}>
-                <div className="bg-slate-50 p-6 rounded-lg">
-                  <div className="aspect-square relative rounded-lg overflow-hidden shadow-md">
-                    <Image
-                      src="/placeholder.svg?height=600&width=600"
-                      alt="Custom Antenna Design"
-                      width={600}
-                      height={600}
-                      className="object-cover transition-transform duration-700 hover:scale-105"
-                    />
-                  </div>
-                  <p className="text-center mt-4 text-slate-600">Custom-designed antenna for microwave imaging</p>
-                </div>
+              <AnimatedSection
+                animation={activeTab === "ee" ? "fade-left" : "none"}
+                delay={500}
+              >
+                <Image
+                  src={antenna}
+                  alt="Custom Antenna Design"
+                  width={600}
+                  height={600}
+                  className="object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <p className="text-center mt-4 text-slate-600">
+                  Custom-designed antenna for microwave imaging
+                </p>
               </AnimatedSection>
 
-              <AnimatedSection animation={activeTab === "ee" ? "fade-right" : "none"} delay={600}>
-                <div className="bg-slate-50 p-6 rounded-lg">
-                  <div className="aspect-square relative rounded-lg overflow-hidden shadow-md">
-                    <Image
-                      src="/placeholder.svg?height=600&width=600"
-                      alt="S11 Parameter Measurements"
-                      width={600}
-                      height={600}
-                      className="object-cover transition-transform duration-700 hover:scale-105"
-                    />
-                  </div>
-                  <p className="text-center mt-4 text-slate-600">
-                    S11 parameter measurement results from the head phantom
-                  </p>
-                </div>
+              <AnimatedSection
+                animation={activeTab === "ee" ? "fade-right" : "none"}
+                delay={600}
+              >
+                <Image
+                  src={collection}
+                  alt="S11 Parameter Measurements"
+                  width={600}
+                  height={600}
+                  className="object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <p className="text-center mt-4 text-slate-600">
+                  S11 parameter measurement results from the head phantom
+                </p>
               </AnimatedSection>
             </div>
           </TabsContent>
 
           <TabsContent value="me" className="space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-9">
               {[
                 {
                   icon: HardHat,
@@ -195,17 +229,30 @@ export function ComponentsSection() {
                     "A specialized head phantom containing materials that mimic brain tissue properties, with a water-filled balloon simulating a stroke for testing and validation.",
                   delay: 400,
                 },
+                {
+                  icon: Activity,
+                  title: "Auto-Sizing System",
+                  description:
+                    "A mechanical and control system that automatically adjusts the helmet size using servo actuators based on real-time head measurements for optimal fit and antenna placement.",
+                  delay: 500,
+                },
               ].map((item, index) => (
-                <AnimatedSection key={index} animation={activeTab === "me" ? "fade-up" : "none"} delay={item.delay}>
+                <AnimatedSection
+                  key={index}
+                  animation={activeTab === "me" ? "fade-up" : "none"}
+                  delay={item.delay}
+                >
                   <Card className="border-blue-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
                     <CardHeader>
-                      <CardTitle className="flex items-center gap-2 text-blue-700">
+                      <CardTitle className="flex items-center gap-2 text-[#210F38]">
                         <item.icon className="h-5 w-5" />
                         {item.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription className="text-slate-700 text-base">{item.description}</CardDescription>
+                      <CardDescription className="text-slate-700 text-base">
+                        {item.description}
+                      </CardDescription>
                     </CardContent>
                   </Card>
                 </AnimatedSection>
@@ -213,43 +260,42 @@ export function ComponentsSection() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <AnimatedSection animation={activeTab === "me" ? "fade-left" : "none"} delay={500}>
-                <div className="bg-slate-50 p-6 rounded-lg">
-                  <div className="aspect-square relative rounded-lg overflow-hidden shadow-md">
-                    <Image
-                      src="/placeholder.svg?height=600&width=600"
-                      alt="Adjustable Helmet Design"
-                      width={600}
-                      height={600}
-                      className="object-cover transition-transform duration-700 hover:scale-105"
-                    />
-                  </div>
-                  <p className="text-center mt-4 text-slate-600">
-                    The adjustable helmet design with antenna mounting points
-                  </p>
-                </div>
+              <AnimatedSection
+                animation={activeTab === "me" ? "fade-left" : "none"}
+                delay={500}
+              >
+                <Image
+                  src={helemt}
+                  alt="Adjustable Helmet Design"
+                  width={600}
+                  height={600}
+                  className="object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <p className="text-center mt-4 text-slate-600">
+                  The adjustable helmet design with antenna mounting points
+                </p>
               </AnimatedSection>
 
-              <AnimatedSection animation={activeTab === "me" ? "fade-right" : "none"} delay={600}>
-                <div className="bg-slate-50 p-6 rounded-lg">
-                  <div className="aspect-square relative rounded-lg overflow-hidden shadow-md">
-                    <Image
-                      src="/placeholder.svg?height=600&width=600"
-                      alt="Head Phantom"
-                      width={600}
-                      height={600}
-                      className="object-cover transition-transform duration-700 hover:scale-105"
-                    />
-                  </div>
-                  <p className="text-center mt-4 text-slate-600">
-                    Head phantom with brain-mimicking material and simulated stroke
-                  </p>
-                </div>
+              <AnimatedSection
+                animation={activeTab === "me" ? "fade-right" : "none"}
+                delay={600}
+              >
+                <Image
+                  src={control}
+                  alt="Head Phantom"
+                  width={600}
+                  height={600}
+                  className="object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <p className="text-center mt-4 text-slate-600">
+                  Head phantom with brain-mimicking material and simulated
+                  stroke
+                </p>
               </AnimatedSection>
             </div>
           </TabsContent>
         </Tabs>
       </div>
     </section>
-  )
+  );
 }

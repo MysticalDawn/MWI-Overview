@@ -58,14 +58,14 @@ export function ProjectOverview() {
               icon: Zap,
               title: "Interdisciplinary Approach",
               description:
-                "Our project combines expertise from electrical engineering, computer science, and mechanical engineering to create a comprehensive solution.",
+                "Our project combines expertise from electrical engineering, computer science, mechanical, and Control engineering to create a comprehensive solution.",
               delay: 600,
             },
           ].map((item, index) => (
             <AnimatedSection key={index} animation="fade-up" delay={item.delay}>
               <Card className="border-blue-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
                 <CardHeader className="pb-2">
-                  <CardTitle className="flex items-center gap-2 text-blue-700">
+                  <CardTitle className="flex items-center gap-2 text-[#210F38]">
                     <item.icon className="h-5 w-5" />
                     {item.title}
                   </CardTitle>

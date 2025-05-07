@@ -4,7 +4,8 @@ import { ArrowRight, CheckCircle } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
-
+import perfect from '../public/perfect.png'
+import type { StaticImageData } from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { AnimatedSection } from "@/components/animated-section"
@@ -69,9 +70,9 @@ export function ResultsSection() {
               onMouseLeave={() => setIsHovered(false)}
             >
               <CardContent className="p-0">
-                <div className="aspect-square relative">
+                <div className="x">
                   <Image
-                    src="/placeholder.svg?height=800&width=800"
+                    src={perfect as StaticImageData}
                     alt="Brain Scan Results"
                     width={800}
                     height={800}
@@ -94,9 +95,10 @@ export function ResultsSection() {
           <div id="demo" className="mt-20 max-w-5xl mx-auto">
             <h3 className="text-2xl font-bold text-blue-800 mb-6 text-center">System Demonstration</h3>
             <div className="aspect-video bg-slate-200 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="w-full h-full flex items-center justify-center">
-                <p className="text-slate-600">Video demonstration placeholder</p>
-              </div>
+              <video controls className="w-full h-full object-cover">
+                <source src="/vid.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
             <p className="text-center mt-4 text-slate-600">
               Demonstration of the complete microwave imaging system for brain stroke detection

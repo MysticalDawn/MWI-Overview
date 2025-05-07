@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import { Brain, Zap } from "lucide-react"
-import Link from "next/link"
-import { useAnimation } from "@/components/animation-provider"
+import { Brain, Zap } from "lucide-react";
+import Link from "next/link";
+import { useAnimation } from "@/components/animation-provider";
 
-import { Button } from "@/components/ui/button"
-import { AnimatedSection } from "@/components/animated-section"
+import { Button } from "@/components/ui/button";
+import { AnimatedSection } from "@/components/animated-section";
 
 export function HeroSection() {
-  const { prefersReducedMotion } = useAnimation()
+  const { prefersReducedMotion } = useAnimation();
 
   return (
-    <div className="relative bg-gradient-to-b from-blue-900 to-blue-950 text-white overflow-hidden">
-      {/* Animated background pattern */}
-      <div className="absolute inset-0 overflow-hidden">
+    // …existing code…
+    // …existing code…
+    <div className="relative bg-gradient-to-b from-blue-950 to-[#210F38] text-white overflow-hidden">      <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#1e3a8a_1px,transparent_1px)] [background-size:20px_20px] opacity-20"></div>
 
         {!prefersReducedMotion && (
@@ -36,28 +36,36 @@ export function HeroSection() {
           <AnimatedSection animation="scale-up" delay={300}>
             <div className="flex items-center justify-center mb-6 bg-blue-800/50 p-4 rounded-full">
               <Brain className="h-10 w-10 text-blue-200 animate-pulse" />
+              <span className="text-blue-200 text-2xl font-bold mx-2"></span>
               <Zap className="h-8 w-8 text-blue-200 -ml-2" />
             </div>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={500}>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Microwave Imaging for
-              <span className="text-blue-300"> Brain Stroke Detection</span>
+              MWI System Design for Brain Stroke Detection
+              <span className="text-red-400">
+                {" "}
+                via AI with Auto-Sized Helmet
+              </span>
             </h1>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={700}>
             <p className="text-xl md:text-2xl text-blue-100 mb-10 max-w-3xl">
-              An interdisciplinary senior project combining electrical engineering, computer science, and mechanical
-              engineering to revolutionize stroke detection.
+              An interdisciplinary senior project combining electrical
+              engineering, computer science, mechanical, and Control engineering to
+              revolutionize stroke detection.
             </p>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={900}>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="#components">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 hover:scale-105">
+                <Button
+                  size="lg"
+                  className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 hover:scale-105"
+                >
                   Explore Project
                 </Button>
               </Link>
@@ -65,7 +73,7 @@ export function HeroSection() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-blue-400 text-blue-100 hover:bg-blue-800/50 transition-all duration-300 hover:scale-105"
+                  className="border-blue-400 text-blue-100 transition-all duration-300 hover:scale-105 text-black"
                 >
                   Meet the Team
                 </Button>
@@ -75,5 +83,5 @@ export function HeroSection() {
         </div>
       </div>
     </div>
-  )
+  );
 }
