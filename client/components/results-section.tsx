@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { AnimatedSection } from "@/components/animated-section";
 import Video from "next-video";
-import vid from '../public/vid.mp4'
+import vid from "../videos/vid.mp4";
 export function ResultsSection() {
   const [isHovered, setIsHovered] = useState(false);
   const achievements = [
