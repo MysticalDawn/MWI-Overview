@@ -1,3 +1,4 @@
+import { withNextVideo } from "next-video/process";
 import { Loader } from "lucide-react";
 import test from "node:test";
 import { use } from "react";
@@ -30,4 +31,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withNextVideo(nextConfig);
