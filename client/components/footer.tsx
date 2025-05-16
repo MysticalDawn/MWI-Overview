@@ -66,23 +66,23 @@ export function Footer() {
                 <li className="flex items-start gap-3 group">
                   <MapPin className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5 group-hover:text-blue-300 transition-colors duration-300" />
                   <span className="text-slate-400 group-hover:text-slate-300 transition-colors duration-300">
-                    Department of Engineering
+                    King Fahd University of Petroleum and Minerals
                     <br />
-                    University Campus
+                    Dhahran, Saudi Arabia
                     <br />
-                    City, State 12345
+                    12345
                   </span>
                 </li>
                 <li className="flex items-start gap-3 group">
                   <Mail className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5 group-hover:text-blue-300 transition-colors duration-300" />
                   <span className="text-slate-400 group-hover:text-slate-300 transition-colors duration-300">
-                    brainproject@university.edu
+                    s202043800@kfupm.edu.sa
                   </span>
                 </li>
                 <li className="flex items-start gap-3 group">
                   <Phone className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5 group-hover:text-blue-300 transition-colors duration-300" />
                   <span className="text-slate-400 group-hover:text-slate-300 transition-colors duration-300">
-                    (123) 456-7890
+                    +966 56 452 7117
                   </span>
                 </li>
               </ul>
