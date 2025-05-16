@@ -70,7 +70,7 @@ export function Footer() {
                     <br />
                     Dhahran, Saudi Arabia
                     <br />
-                    12345
+                    31261
                   </span>
                 </li>
                 <li className="flex items-start gap-3 group">
@@ -93,7 +93,7 @@ export function Footer() {
         <AnimatedSection animation="fade-up" delay={400}>
           <div className="border-t border-slate-800 pt-8 text-center text-slate-500">
             <p>© {new Date().getFullYear()} Microwave Imaging for Brain Stroke Detection. All rights reserved.</p>
-            <p className="mt-2 text-sm">Senior Project - University Engineering Department</p>
+            <p className="mt-2 text-sm">Senior Project</p>
           </div>
         </AnimatedSection>
       </div>
