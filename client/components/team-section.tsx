@@ -26,13 +26,15 @@ const teamMembers = [
     focus: "",
     avatar: "/placeholder.svg?height=200&width=200",
     initial: "MA",
+    linkedin: "",
   },
   {
     name: "Tarek Alhouri",
     role: "Electrical Engineering",
     focus: "",
-    avatar: khaled.src,
+    avatar: tarek.src,
     initial: "TA",
+    linkedin: "https://www.linkedin.com/in/tarek-alhouri-765b5a24b",
   },
   {
     name: "Hassan Hizeh",
@@ -40,6 +42,7 @@ const teamMembers = [
     focus: "",
     avatar: hassan.src,
     initial: "HH",
+    linkedin: "https://www.linkedin.com/in/hassan-hizeh-4a618b1ba/",
   },
   {
     name: "Khalid Alfuwail",
@@ -47,6 +50,7 @@ const teamMembers = [
     focus: "",
     avatar: khaled.src,
     initial: "KA",
+    linkedin: "https://www.linkedin.com/in/khalid-m-alfuwail-345238245/",
   },
   {
     name: "Abdullah Alfayez",
@@ -54,6 +58,7 @@ const teamMembers = [
     focus: "",
     avatar: abdu.src,
     initial: "AA",
+    linkedin: "",
   },
   {
     // row 2, col 3
@@ -62,6 +67,7 @@ const teamMembers = [
     focus: "",
     avatar: "/placeholder.svg?height=200&width=200",
     initial: "AB",
+    linkedin: "https://www.linkedin.com/in/abdulwahab-al-abdulwahab",
   },
 ];
 
@@ -128,6 +134,9 @@ export function TeamSection() {
                     variant="ghost"
                     size="icon"
                     className="rounded-full h-8 w-8 transition-transform duration-300 hover:scale-125"
+                    onClick={() =>
+                      member.linkedin && window.open(member.linkedin, "_blank")
+                    }
                   >
                     <Linkedin className="h-4 w-4 text-blue-600" />
                   </Button>
